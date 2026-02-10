@@ -1,0 +1,29 @@
+<section class="tech-section">
+  <div class="container">
+    <div class="heading text-center">
+      <span class="text-sky-400 font-mono text-[10px] tracking-[0.4em] uppercase">My Arsenal</span>
+      <h2 class="text-4xl md:text-5xl font-black text-white mt-2">Tech Stack</h2>
+      <div class="h-1 w-20 bg-sky-500 mx-auto mt-4 rounded-full shadow-[0_0_15px_#38bdf8]"></div>
+    </div>
+
+    <div class="slider-wrapper mask-gradient">
+      <div class="slider-track">
+        <div class="tech-card group" *ngFor="let stack of stacks">
+          <div class="card-inner">
+            <i [class]="stack.icon + ' group-hover:scale-110 transition-transform duration-500'"></i>
+            <span>{{ stack.name }}</span>
+          </div>
+          <div class="absolute inset-0 bg-sky-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity"></div>
+        </div>
+
+        <div class="tech-card group" *ngFor="let stack of stacks">
+          <div class="card-inner">
+            <i [class]="stack.icon + ' group-hover:scale-110 transition-transform duration-500'"></i>
+            <span>{{ stack.name }}</span>
+          </div>
+          <div class="absolute inset-0 bg-sky-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-[100] bg-[#020617]/80 backdrop-blur-xl border border-white/10 rounded-2xl h-16 md:h-20 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.7)]">
+  <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center relative">
+
+    <h1 class="text-lg md:text-2xl font-black tracking-tighter text-white group cursor-pointer">
+      BILAL<span class="text-sky-400 group-hover:text-sky-300 transition-colors duration-300">.DEV</span>
+    </h1>
+
+    <ul class="hidden md:flex items-center gap-10 text-sm font-semibold uppercase tracking-widest text-gray-400">
+      <li class="relative group"><a href="#home" class="hover:text-white transition-colors">Home</a><span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-sky-400 transition-all duration-300 group-hover:w-full"></span></li>
+      <li class="relative group"><a href="#about" class="hover:text-white transition-colors">About</a><span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-sky-400 transition-all duration-300 group-hover:w-full"></span></li>
+      <li class="relative group"><a href="#skills" class="hover:text-white transition-colors">Skills</a><span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-sky-400 transition-all duration-300 group-hover:w-full"></span></li>
+      <li class="relative group"><a href="#projects" class="hover:text-white transition-colors">Projects</a><span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-sky-400 transition-all duration-300 group-hover:w-full"></span></li>
+      <li>
+        <a href="#contact" class="bg-sky-500 text-white px-6 py-2 rounded-full hover:bg-sky-600 transition-all">Let's Talk</a>
+      </li>
+    </ul>
+
+    <button (click)="open = !open" class="md:hidden flex flex-col gap-1 z-[110] focus:outline-none">
+      <div class="w-6 h-[2px] bg-white rounded-full transition-all duration-300" [class.rotate-45]="open" [class.translate-y-1.5]="open"></div>
+      <div class="w-6 h-[2px] bg-white rounded-full transition-all duration-300" [class.opacity-0]="open"></div>
+      <div class="w-6 h-[2px] bg-white rounded-full transition-all duration-300" [class.-rotate-45]="open" [class.-translate-y-2]="open"></div>
+    </button>
+
+    <div [class.translate-x-0]="open"
+         [class.opacity-100]="open"
+         [class.translate-x-full]="!open"
+         [class.opacity-0]="!open"
+         class="fixed top-0 right-0 w-[65%] h-screen bg-[#050a14] border-l border-white/10 flex flex-col justify-center items-center gap-6 shadow-[-20px_0_50px_rgba(0,0,0,0.9)] transition-all duration-500 ease-in-out md:hidden z-[105]">
+      
+      <span class="absolute top-8 left-8 text-[10px] text-gray-500 uppercase tracking-[0.3em]">Navigation</span>
+
+      <a (click)="open = false" href="#home" class="text-base font-medium tracking-[0.2em] text-gray-300 hover:text-sky-400 transition-all duration-300">HOME</a>
+      <a (click)="open = false" href="#about" class="text-base font-medium tracking-[0.2em] text-gray-300 hover:text-sky-400 transition-all duration-300">ABOUT</a>
+      <a (click)="open = false" href="#skills" class="text-base font-medium tracking-[0.2em] text-gray-300 hover:text-sky-400 transition-all duration-300">SKILLS</a>
+      <a (click)="open = false" href="#projects" class="text-base font-medium tracking-[0.2em] text-gray-300 hover:text-sky-400 transition-all duration-300">PROJECTS</a>
+      
+      <div class="h-[1px] w-12 bg-white/10 my-2"></div> <a (click)="open = false" href="#contact" class="text-base font-bold text-sky-400 px-6 py-2 border border-sky-400/50 rounded-full bg-sky-400/5">CONTACT</a>
+
+      <div class="absolute bottom-12 flex gap-6">
+  <a href="https://github.com/bilalgull678" 
+     target="_blank" 
+     class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-sky-500/20 border border-white/10 transition-all duration-300">
+    <i class="devicon-github-original text-xl"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/in/muhammad-bilal-gull-21a41a221/" 
+     target="_blank" 
+     class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-sky-400 hover:bg-sky-500/20 border border-white/10 transition-all duration-300">
+    <i class="devicon-linkedin-plain text-xl"></i>
+  </a>
+</div>
+    </div>
+
+  </div>
+</nav>

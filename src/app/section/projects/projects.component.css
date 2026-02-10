@@ -1,0 +1,26 @@
+.project-card-modern {
+  @apply relative p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 
+         transition-all duration-500 flex flex-col hover:bg-white/[0.05] 
+         hover:border-sky-500/30 hover:-translate-y-3 cursor-default;
+  backdrop-filter: blur(10px);
+}
+
+.badge-modern {
+  @apply px-3 py-1 bg-white/[0.03] border rounded-lg text-[10px] 
+         font-bold uppercase tracking-widest transition-all duration-300;
+}
+
+.project-card-modern:hover .badge-modern {
+  @apply bg-white/10 border-white/30;
+}
+
+/* Internal shadow for depth */
+.project-card-modern::before {
+  content: '';
+  @apply absolute inset-0 rounded-[2.5rem] opacity-0 transition-opacity duration-500 pointer-events-none;
+  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);
+}
+
+.project-card-modern:hover::before {
+  @apply opacity-100;
+}
